@@ -1,0 +1,35 @@
+
+
+.attention {
+    background-color: rgb(239, 75, 75);
+    border-radius: 2px;
+    font-size: 15px;
+    color: white;
+    padding: 3px;
+    margin-left: 8px;
+  }
+  
+  .room-container {
+    margin-bottom:  40px;
+  }
+  .room-new-title {
+    margin-bottom: 40px;
+    padding: 40px;
+  }
+  
+  table {
+    margin-left: 20px;
+  }
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  .notice-ng {
+    background-color: rgb(244, 93, 93);
+    padding: 5px;
+  }
+  
+  .notice-ok {
+    background-color: rgb(118, 118, 249);
+    padding: 5px;
+  }

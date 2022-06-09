@@ -1,0 +1,26 @@
+<h1>検索結果</h1>
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>画像</th>
+      <th>住所</th>
+      <th>価格</th>
+      <th>紹介文</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |room| %>
+      <tr>
+        <td><%=link_to room.name, new_reservation_path(room.id) %></td>
+        <td><%= image_tag room.avatar.url%></td>
+        <td><%= room.adress %></td>
+        <td><%= room.price %></td>
+        <td><%= room.introduction %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Top', users_path %>

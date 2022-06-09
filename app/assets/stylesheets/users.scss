@@ -1,0 +1,177 @@
+
+
+body {
+    margin: 0;
+  }
+  header, footer {
+    background-color: black;
+    color: aliceblue;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 5 10px;
+    list-style: none;
+  }
+  .header-menu {
+    padding: 5 20px;
+  }
+  
+  .search-header {
+    display: flex;
+  }
+  .menu-login {
+    background-color: aquamarine;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .menu-signup {
+    background-color: rgb(152, 233, 94);
+    border-radius: 10px;
+  }
+  
+  footer {
+    height: 200px;
+    text-align: center;
+  }
+  
+  footer p {
+    padding-top: 90px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-rows: 30rem;
+    grid-template-columns: 20% 20% 20% 20%;
+    text-align: center;
+    gap: 30px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  a { 
+    color:#95959b; 
+    text-decoration:none; 
+  }
+  
+  a:hover {
+    color: red;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+  .top_img {
+      background-image: image_url('top_img.jpeg');
+      height: 650px;
+      background-size:cover;
+      position: relative;
+  }
+  
+  .serch_area {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 30px;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .area {
+    display: flex;
+    padding-left: 5%;
+  }
+  
+  .serch_input {
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+  
+  .serch_button {
+    width: 90%;
+    padding: 5px;
+    background-color: rgb(47, 129, 244);
+    color: aliceblue;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 0;
+  }
+  header {
+    height: 180px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .recomend_area {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80 0px;
+  }
+  
+  
+  .acd-check{
+    display: none;
+  }
+  .acd-label{
+    background: rgb(0, 0, 0);
+    color: #fff;
+  
+    font-size: 26px;
+  }
+  .acd-content{
+    background-color: black;
+    height: 0;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+  }
+  .acd-check:checked + .acd-label + .acd-content{
+    height: 10px;
+    opacity: 1;
+    padding: 0 10px;
+    visibility: visible;
+  }
+  
+  .account-navi {
+    display: flex;
+  }
+  
+  .choice-account {
+    margin-right: 40px;
+  }
+  .under-bar {
+    border-bottom: 1px gray solid;
+    padding-bottom: 30px;
+  }
+  
+  .icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-container {
+    text-align: center;
+    background-color: #95959b;
+    padding: 15px;
+  }
+  
+  .name {
+    text-align: center;
+  }

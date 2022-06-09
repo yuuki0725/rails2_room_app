@@ -1,0 +1,41 @@
+<h3 class=room-new-title>ルーム登録</h3>
+
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+<%= form_with model:@room do |f| %>
+  <table cellpadding="30" border-bottom="1">
+
+    <tr class="table-title">
+      <th><%= f.label :name ,"ルーム名" %><span class="attention">必須</span></th>
+      <td><%= f.text_field :name, :placeholder => "ルーム名を入力" %></td>
+    </tr>
+
+    <tr class="table-title">
+      <th><%= f.label :introduction ,"ルーム紹介" %><span class="attention">必須</span></th>
+      <td><%= f.text_area :introduction , :placeholder => "ルーム説明を入力"%></td>
+    </tr>
+
+    <tr class="table-title">
+      <th><%= f.label :price ,"料金" %><span class="attention">必須</span></th>
+      <td><%= f.text_field :price , :placeholder => "1日あたりの料金を入力"%></td>
+    </tr>
+
+    <tr class="table-title">
+      <th><%= f.label :adress ,"住所" %><span class="attention">必須</span></th>
+      <td><%= f.text_field :adress , :placeholder => "住所を入力"%></td>
+    </tr>
+
+    <tr class="table-title">
+      <th><%= f.label :avatar ,"イメージ画像"%><span class="attention">必須</span></th>
+      <td><%= f.file_field :avatar %></td>
+    </tr>
+  </table>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <div>
+    <ul>
+      <li><%= f.submit "登録"%></li>
+      <li><%= link_to "TOPに戻る", :users %></li>
+    </ul>
+  </div>
+<%end%>

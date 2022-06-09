@@ -1,0 +1,23 @@
+<div class="account-navi">
+  <p class="choice-account"><%= link_to'アカウント',current_user%></p>
+  <p class="choice-profile"><%= link_to'プロフィール',users_profile_path%></p>
+</div>
+
+<h2>プロフィール情報更新</h2>
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+<%= form_with model: @user do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :icon,"アイコン" %></th>
+      <td><%= f.file_field :icon %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :introduction,"自己紹介文" %></th>
+      <td><%= f.text_area :introduction %></td>
+    </tr>
+  </table>
+
+  <%= f.submit "編集を完了する" %>
+<%end%>
