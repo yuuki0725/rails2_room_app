@@ -1,0 +1,41 @@
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+
+<div class ="container">
+  <div class="top_img">
+    <div class="serch_area">
+      <h3>Pote Shareでまだ体験したことのない旅をしよう</h3>
+      <br>
+      <p class="area">エリア</p>
+      
+      <%= search_form_for @q, url: search_rooms_path do |f| %>
+        <%= f.search_field :adress_cont, placeholder:'東京' %>
+        <br>
+        <%= f.submit '検索' %>
+      <% end %>
+    
+    </div>
+  </div>
+  <div class="recomend_area">
+    <h2>オススメのエリア</h2>
+    <div class="grid">
+      <div class="grid_child_1">
+        <%= link_to '東京',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'東京'}}%><br>
+        <%=image_tag 'img_tokyo.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_2">
+        <%= link_to '大阪',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'大阪'}}%><br>
+        <%=image_tag 'img_osaka.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_3">
+        <%= link_to '京都',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'京都'}}%><br>
+        <%=image_tag 'img_kyoto.jpeg', size: '250x350' %>
+      </div>
+      <div class="grid_child_4">
+        <%= link_to '札幌',{:controller=>"rooms",:action=>"search",:q=>{:adress_cont=>'札幌'}}%><br>
+        <%=image_tag 'img_sapporo.jpeg', size: '250x350' %>
+      </div>
+    </div>
+  </div>
+</div>

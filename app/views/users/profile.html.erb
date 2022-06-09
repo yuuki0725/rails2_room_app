@@ -1,0 +1,26 @@
+
+<% if flash[:notice]%>
+  <p class="notice-ok"><%= flash[:notice]%></p>
+<%end%>
+
+<div class="account-navi">
+  <p class="choice-account"><%= link_to'アカウント',current_user%></p>
+  <p class="choice-profile"><%= link_to'プロフィール',users_profile_path%></p>
+</div>
+
+<h2>プロフィール画面</h2>
+
+<div class ="profile-container">
+  <div class="profile-icon">
+    <%= image_tag @user.icon.url, class: "icon"%>
+  </div>
+  <div class="profile-name">
+    <%= @user.name%>
+  </div>
+  <div class="profile-introduction">
+    <%= @user.introduction%>
+  </div>
+</div>
+<button>
+  <%=link_to "編集する", "profile/edit"%>
+</button>
